@@ -316,6 +316,10 @@ body{
     gap: 3rem;
 }
 
+#paragraph{
+	color: var(--airforce_white);
+}
+
 .visitor-item {
     padding: 2rem;
     border-bottom: 1px solid #eee;
