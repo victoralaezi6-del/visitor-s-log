@@ -11,7 +11,7 @@
     --airforce_dark_blue: #06022b;
     --airforce_black: #000000;
     --airforce_gold: #d1b931;
-    --airforce_light: #000000;
+    --airforce_light: #f5f5f5;
     --airforce_white: #ffffff;
     --airforce_gray: #333333;
     --danger_red:#da251c;
@@ -138,14 +138,14 @@ body{
 
 .welcome-message h1 {
     font-size: var(--primary_font);
-    color: var(--airforce_white);
+    color: var(--airforce_blue);
     margin: 0 0 2rem 0;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);        
 }
 
 .welcome-message p {
     font-size: var(--secondary_font);
-    color: var(--airforce_white);
+    color: var(--airforce_gray);
     line-height: 1.7;
     margin: 0 auto;
 	max-width: 70%;
