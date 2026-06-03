@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFIT Academic-Branch | VisitorsLogSystem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+                <div class="logo">
+                    <img src="logo/afitLogo.jpeg" alt="AirForce Institute of Technology, Kaduna – Nigeria" class="main-logo">   
+                </div>
+               <div class="header-text">
+                    <h1>AirForce Institute of Technology</h1>
+                    <h2>Academic Branch - Visitor's Log System</h2>
+                </div>
+        </header>
+        
+        <main class="main-content">
+            <!-- Landing Page -->
+            <div id="landing-view" class="view active">
+                <div class="notice-message">
+                    <P>ATTENTION - Visitors must sign in via the system. Visitors are not allowed to touch any device. 
+                    The devices are operated by the curator only. Visitors are to be taken round by the curator only.</p>
+                </div>
+                <div class="welcome-message">
+                    <h1>WELCOME TO THE AFIT ACADEMIC BRANCH</h1>
+                    <p>The AirForce Institute of Technology honors the exemplary service and achievements of our nation's finest military personnel. Please sign in to record your visit to this distinguished institution.</p>
+                </div>
+                
+                <div class="button-container">
+                    <button id="signin-btn" class="action-button signin-btn">
+                        <span>VISITOR'S SIGN-IN</span>
+                        <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                    
+                    <button id="signout-btn" class="action-button signout-btn">
+                        <span>VISITOR'S SIGN-OUT</span>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Sign In Form -->
+            <div id="signin-view" class="view">
+                <div class="form-container">
+                    <h2 class="form-title">Visitor's Sign In</h2>
+                    <form id="signin-form">
+                        <div class="form-group">
+                            <label for="visitor-name">Full Name *</label>
+                            <input type="text" id="visitor-name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="visit-reason">Reason for Visit *</label>
+                            <select id="visit-reason" class="form-control" required>
+                                <option value="" disabled selected>Select a reason</option>
+                                <option value="Official Duty">Official Duty</option>
+                                <option value="Research/Academic">Research/Academic</option>
+                                <option value="Ceremony/Event">Ceremony/Event</option>
+                                <option value="Guest Speaker">Guest Speaker</option>
+                                <option value="Tour">Tour</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone-number">Phone Number *</label>
+                            <input type="tel" id="phone-number" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" id="back-from-signin" class="form-btn back-btn">
+                                <i class="fas fa-arrow-left"></i>Go Back
+                            </button>
+                            <button type="submit" class="form-btn submit-btn">
+                                Sign In<i class="fas fa-check-circle"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Sign Out List -->
+            <div id="signout-view" class="view">
+                <div class="form-container">
+                    <h2 class="form-title">Visitor's Sign Out</h2>
+                    <p>Select your name from the list below to sign out:</p>
+                    
+                    <div id="signout-list" class="signout-list">
+                        <!-- Visitor list will be dynamically populated here -->
+                        <div class="no-visitors" id="no-visitors-msg">
+                            <i class="fas fa-users-slash" style="font-size: 3rem; color: #ccc; margin-bottom: 15px;"></i>
+                            <p>No visitors currently signed in.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" id="back-from-signout" class="form-btn back-btn">
+                            <i class="fas fa-arrow-left"></i> Back to Home
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer id="footerr" class="footer">
+            <p><strong>AFIT Academic Branch Visitor's Log System</strong> | This system records all visits to the AirForce Institute of Technology Academic Branch.</p>
+            <p>All visitor's information is securely stored and protected in accordance with AFIT regulations.</p>
+            <p>&copy;2026. Built by <strong>Victor Chinenye</strong></p>
+        </footer>
+    </div>
+    
+    <!-- Thank You Message -->
+    <div id="thank-you-message" class="message">
+        <i class="fas fa-check-circle"></i> Thank You for Visiting!
+    </div>
+    <script src="academic branch visitor's log.js"></script>
+</body>
+</html>

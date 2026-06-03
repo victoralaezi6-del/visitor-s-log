@@ -1,0 +1,436 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+:root{
+    font-size: 62.5%;
+    --airforce_blue: #00124d;
+    --airforce_dark_blue: #06022b;
+    --airforce_black: #000000;
+    --airforce_gold: #d1b931;
+    --airforce_light: #f5f5f5;
+    --airforce_white: #ffffff;
+    --airforce_gray: #333333;
+    --danger_red:#da251c;
+	--primary_font: 3rem;
+	--secondary_font: 2rem;
+    --transform: scale(1.05, 1.05);
+}
+
+body{
+    background-color: var(--airforce_light);
+    color: var(--airforce_gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: default;
+}
+
+.container{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--airforce_white);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+    /* height: 100vh; */
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--airforce_dark_blue);
+    color: var(--airforce_white);
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem; 
+    margin: 0 0 3rem 0; 
+}
+
+.logo img{
+    height: 10rem;
+    width: 10rem;
+}
+
+.header h1 {
+    font-size: var(--primary_font);
+    font-weight: 600;
+    color: var(--airforce_white);
+    letter-spacing: 1px;
+}
+
+.header h2 {
+    font-size: var(--secondary_font);
+    font-weight: 400;
+    color: var(--airforce_white);
+    margin-top: 0.2rem;
+    letter-spacing: 0.5px;
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.view{
+    max-height: 85vh;
+    max-width: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+.view.active {
+    display: block;
+}
+
+#signout-view{
+    overflow: auto;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.notice-message{
+    width: 100%;
+    background-color: #ffdddd;
+    border: 2px solid #ff5c5c;
+    border-radius: 0.8rem;
+    margin: 0 0 3rem 0;
+    overflow: hidden;
+}
+
+.notice-message p{
+    font-size: var(--secondary_font);
+    animation: move 20s linear infinite;
+    position: relative;
+    white-space: nowrap;
+}
+
+@keyframes move {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 160%;
+    }
+}
+
+/* Landing Page Styles */
+.welcome-message {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    text-align: center;
+}
+
+.welcome-message h1 {
+    font-size: var(--primary_font);
+    color: var(--airforce_blue);
+    margin: 0 0 2rem 0;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);        
+}
+
+.welcome-message p {
+    font-size: var(--secondary_font);
+    color: var(--airforce_gray);
+    line-height: 1.7;
+    margin: 0 auto;
+	max-width: 70%;
+}
+
+.button-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 6rem 0;
+}
+
+.action-button {
+    padding: 2rem 4rem;
+    font-size: var(--secondary_font);
+    font-weight: 700;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signin-btn {
+    background-color: var(--airforce_blue);
+    color: white;
+}
+
+.signout-btn {
+    background-color: var(--danger_red);
+    color: white;
+}
+
+.action-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.signin-btn:hover {
+    background-color: var(--airforce_dark_blue);
+}
+
+.signout-btn:hover {
+    background-color: #222;
+}
+
+.action-button i {
+    font-size: var(--secondary_font);
+}
+
+/* Form Styles */
+.form-container {
+    background-color: #f9f9f9;
+    padding: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-container p{
+    font-size: var(--secondary_font);
+}
+
+.form-title {
+    color: var(--airforce_blue);
+    font-size: var(--primary_font);
+    border-bottom: 2px solid var(--airforce_gold);
+    padding-bottom: 0.2rem;
+    text-align: center;
+}
+
+#signin-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--airforce_gray);
+    font-size: var(--secondary_font);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 0.6rem;
+    font-size: var(--secondary_font);
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--airforce_blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 0, 0.2);
+}
+
+.form-buttons {
+    display: flex;
+    margin-top: 2rem;
+    gap: 2rem;
+    justify-self: center;
+}
+
+.form-btn {
+    padding: 1.5rem 3rem;
+    font-size: var(--secondary_font);
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.submit-btn {
+    background-color: var(--airforce_blue);
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--airforce_dark_blue);
+    transform: var(--transform);
+}
+
+.back-btn {
+    background-color: #eee;
+    color: var(--airforce_gray);
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.back-btn:hover {
+    background-color: #ddd;
+    transform: var(--transform);
+}
+
+/* Sign Out List Styles */
+.signout-list {
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.visitor-item {
+    padding: 2rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.visitor-item:hover {
+    background-color: #f9f9f9;
+}
+
+.visitor-item:last-child {
+    border-bottom: none;
+}
+
+.visitor-info h3 {
+    color: var(--airforce_blue);
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.visitor-info p {
+    color: var(--airforce_gray);
+    font-size: 2rem;
+}
+
+.signout-action-btn {
+    padding: 1rem 2.5rem;
+    background-color: var(--airforce_black);
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.signout-action-btn:hover {
+    background-color: #222;
+}
+
+.no-visitors {
+    padding: 4rem;
+    text-align: center;
+    color: var(--airforce_gray);
+    font-size: var(--secondary_font);
+}
+
+ /* Message Styles */
+.message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--airforce_blue);
+    color: white;
+    padding: 3rem 5rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+    animation: pulse 2s infinite;
+    display: none;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.05); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--airforce_black);
+    color: var(--airforce_white);
+    padding: 2rem 3rem;
+    text-align: center;
+    border-top: 0.5rem solid var(--airforce_blue);
+    font-size: var(--secondary_font);
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    color: #ccc;
+}
+
+.footer strong {
+    color: var(--airforce_gold);
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 62.5rem){
+    :root{
+        font-size: 50%;
+    }
+
+    .button-container{
+        flex-direction: column;
+    }
+
+    .action-button{
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 39.5rem) {
+    :root{
+        font-size: 37.5%;
+    }
+
+    .main-content{
+        height: none;
+    }
+}
