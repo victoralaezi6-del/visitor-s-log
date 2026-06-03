@@ -217,7 +217,7 @@ body{
 }
 
 .form-title {
-    color: var(--airforce_white);
+    color: var(--airforce_blue);
     font-size: var(--primary_font);
     border-bottom: 2px solid var(--airforce_gold);
     padding-bottom: 0.2rem;
@@ -237,7 +237,7 @@ body{
 }
 
 .form-group label {
-    color: var(--airforce_white);
+    color: var(--airforce_gray);
     font-size: var(--secondary_font);
 }
 
@@ -314,10 +314,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 3rem;
-}
-
-#paragraph{
-	color: var(--airforce_white);
 }
 
 .visitor-item {
@@ -400,7 +396,7 @@ body{
     color: var(--airforce_white);
     padding: 2rem 3rem;
     text-align: center;
-    border-top: 0.5rem solid var(--airforce_white);
+    border-top: 0.5rem solid var(--airforce_blue);
     font-size: var(--secondary_font);
 }
 
