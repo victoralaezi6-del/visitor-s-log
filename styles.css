@@ -400,7 +400,7 @@ body{
     color: var(--airforce_white);
     padding: 2rem 3rem;
     text-align: center;
-    border-top: 0.5rem solid var(--airforce_blue);
+    border-top: 0.5rem solid var(--airforce_white);
     font-size: var(--secondary_font);
 }
 
